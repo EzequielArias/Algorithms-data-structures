@@ -8,7 +8,7 @@ interface Person{
 }
 
 class People {
-
+    content : Object[]
 
     create( newClient : Person, filename : string):Person{
 
@@ -28,24 +28,32 @@ class People {
         return JSON.parse(data)
     }
 
-    update(name : string,data : Person, filename : string):string{
-        let index = this.read(filename)
-        for (let i = 0; i < index.length; i++) {
-            console.log("#######################")
-            console.log(index[i])            
-        }
-        return ''
+    update(name : string,data : Person, filename : string):string | Object{
+        let mod = this.read(filename)
+
+        this.content = mod
+
+        let i = this.content.findIndex(el => el["name"] === name)
+
+        this.content[i]["name"] = name
+        this.content[i]["email"] = data.email
+        this.content[i]["lastName"] = data.lastName
+        this.content[i]["nickName"] = data.nickName
+
+        fs.writeFileSync(filename,JSON.stringify(this.content))
+        
+        return `el usuario ${name} fue actualizado correctamente`
     }
 
-    //delete(id):string{}
+    delete(id):string{}
 }
 
 const teo = new People()
 //console.log(teo.read('./data.json'))
 //console.log(teo.create({name : "Poo", lastName : "Fideos", email : "Poo@gmail.com",nickName : "Guerrero dragon"},'./data.json'))
-teo.update('Poo',
+/*teo.update('Poo',
 {name : "Cheguevara",
  email : "eze@gmail.com",
   lastName : "montoto",
    nickName : "crijav"}
-   ,'./data.json')
+   ,'./data.json')*/

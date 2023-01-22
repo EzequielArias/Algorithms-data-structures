@@ -25,12 +25,15 @@ var People = /** @class */ (function () {
         return JSON.parse(data);
     };
     People.prototype.update = function (name, data, filename) {
-        var index = this.read(filename);
-        for (var i = 0; i < index.length; i++) {
-            console.log("#######################");
-            console.log(index[i]);
-        }
-        return '';
+        var mod = this.read(filename);
+        this.content = mod;
+        var i = this.content.findIndex(function (el) { return el["name"] === name; });
+        this.content[i]["name"] = name;
+        this.content[i]["email"] = data.email;
+        this.content[i]["lastName"] = data.lastName;
+        this.content[i]["nickName"] = data.nickName;
+        fs.writeFileSync(filename, JSON.stringify(this.content));
+        return "el usuario ".concat(name, " fue actualizado correctamente");
     };
     return People;
 }());
