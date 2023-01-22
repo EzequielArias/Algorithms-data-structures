@@ -45,7 +45,16 @@ class People {
         return `el usuario ${name} fue actualizado correctamente`
     }
 
-    delete(id):string{}
+    delete(name : string, filename : string):string {
+        let mod = this.read(filename)
+
+        this.content = mod
+
+        let dataWithItemEliminated = this.content.filter(el => el["name"] !== name)
+
+        fs.writeFileSync(filename,JSON.stringify(dataWithItemEliminated))
+        return `El elemento con el nombre ${name} fue eliminado correctamente`
+    }
 }
 
 const teo = new People()
@@ -57,3 +66,4 @@ const teo = new People()
   lastName : "montoto",
    nickName : "crijav"}
    ,'./data.json')*/
+   console.log(teo.delete('Poo','./data.json'))
