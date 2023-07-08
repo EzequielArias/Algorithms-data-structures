@@ -2,7 +2,11 @@ import { DataType } from "../interfaces";
 
 export class LinkedList {
 
-    constructor(
+        private head : Nodo = {} as Nodo
+        private _length: number = 0
+        private tail : Nodo = {} as Nodo
+
+    /*constructor(
         private head:  null | Nodo,
         private _length: number,
         private tail: Nodo | null
@@ -11,7 +15,7 @@ export class LinkedList {
             this.head = null;
             this._length = 0;
             this.tail = null
-        }
+        }*/
 
     public insert(data: DataType) : void {
         const nodo = new Nodo(data)
@@ -21,7 +25,7 @@ export class LinkedList {
         {
             this.head = nodo;
             this._length++
-            return
+            return 
         }
 
         while (!current['next']) {
@@ -40,7 +44,7 @@ export class LinkedList {
                current['data'].car_brand === query || 
                current['data'].car_category === query)
             {
-                this.head = null
+                this.head = {} as Nodo
             }
         }
 

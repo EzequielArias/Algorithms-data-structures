@@ -9,12 +9,13 @@ const removeExtension = (fileName: string) => {
   return fileName.split(".").shift();
 };
 
-const a = fs.readdirSync(PATH_NOTES).filter((file: string) => {
+const a = fs.readdirSync(PATH_NOTES).filter((file: any) => {
   const name = removeExtension(file);
-
+  
   if (name !== "index") {
-    router.use(`/${name}`, require(`./${file}`));
+    console.log(name)
+    router.use(`/${name}`, require(`./${file}`).default);
   }
 });
 
-export { router }
+export {router};

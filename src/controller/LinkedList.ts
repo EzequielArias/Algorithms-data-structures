@@ -2,14 +2,19 @@ import { LinkedList } from "../classes"
 import { DataType, TypedRequestBody, LinkedData } from "../interfaces"
 
 
-const controller : LinkedList = new LinkedList(null,0,null)
+const controller : LinkedList = new LinkedList()
 
-const insert = (req : TypedRequestBody<LinkedData>, res : Response) => {
+const insert = (req : TypedRequestBody<LinkedData>, res : any) => {
 
     const { data } = req.body
     
-    return controller.insert(data)
+    controller.insert(data)
+    res.status(200)
 }
 
-export { insert }
+const deletion = () => {}
+
+const searching = () => {}
+
+export { insert, deletion, searching }
 

@@ -1,0 +1,105 @@
+{
+    "autos": [
+      {
+        "car_brand": "Toyota",
+        "car_name": "Corolla",
+        "car_category": "Sedan"
+      },
+      {
+        "car_brand": "Honda",
+        "car_name": "Civic",
+        "car_category": "Sedan"
+      },
+      {
+        "car_brand": "Ford",
+        "car_name": "Mustang",
+        "car_category": "Coupe"
+      },
+      {
+        "car_brand": "Chevrolet",
+        "car_name": "Camaro",
+        "car_category": "Coupe"
+      },
+      {
+        "car_brand": "Volkswagen",
+        "car_name": "Golf",
+        "car_category": "Hatchback"
+      },
+      {
+        "car_brand": "BMW",
+        "car_name": "3 Series",
+        "car_category": "Sedan"
+      },
+      {
+        "car_brand": "Mercedes-Benz",
+        "car_name": "C-Class",
+        "car_category": "Sedan"
+      },
+      {
+        "car_brand": "Audi",
+        "car_name": "A4",
+        "car_category": "Sedan"
+      },
+      {
+        "car_brand": "Nissan",
+        "car_name": "Altima",
+        "car_category": "Sedan"
+      },
+      {
+        "car_brand": "Mazda",
+        "car_name": "MX-5 Miata",
+        "car_category": "Convertible"
+      },
+      {
+        "car_brand": "Subaru",
+        "car_name": "Impreza",
+        "car_category": "Hatchback"
+      },
+      {
+        "car_brand": "Kia",
+        "car_name": "Soul",
+        "car_category": "Hatchback"
+      },
+      {
+        "car_brand": "Hyundai",
+        "car_name": "Tucson",
+        "car_category": "SUV"
+      },
+      {
+        "car_brand": "Volvo",
+        "car_name": "XC60",
+        "car_category": "SUV"
+      },
+      {
+        "car_brand": "Lexus",
+        "car_name": "RX",
+        "car_category": "SUV"
+      },
+      {
+        "car_brand": "Jeep",
+        "car_name": "Wrangler",
+        "car_category": "SUV"
+      },
+      {
+        "car_brand": "Tesla",
+        "car_name": "Model S",
+        "car_category": "Sedan"
+      },
+      {
+        "car_brand": "Porsche",
+        "car_name": "911",
+        "car_category": "Coupe"
+      },
+      {
+        "car_brand": "Ferrari",
+        "car_name": "488 GTB",
+        "car_category": "Coupe"
+      },
+      {
+        "car_brand": "Lamborghini",
+        "car_name": "Huracan",
+        "car_category": "Coupe"
+      }
+    ]
+  }
+  
