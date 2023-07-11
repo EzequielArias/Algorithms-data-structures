@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "npx tsc",
-    "start:dev": "ts-node-dev src/main.ts"
+    "start:dev": "ts-node-dev src/main.ts",
+    "format" : "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
   },
   "author": "Ezequiel Arias",
   "license": "ISC",
