@@ -97,7 +97,6 @@ export class LinkedList {
         current['data'].car_brand === query ||
         current['data'].car_category === query
       ) {
-        console.log(current);
         return current;
       }
     }

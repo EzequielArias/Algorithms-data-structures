@@ -6,7 +6,7 @@ import {
   TypedRequestQuery,
   CustomQuery,
 } from '../interfaces';
-import { Response, Request } from 'express';
+import { Response } from 'express';
 
 const controller: LinkedList = new LinkedList();
 

@@ -11,3 +11,9 @@ export interface LinkedData {
 export interface CustomQuery {
   str: string;
 }
+
+export interface Recipe {
+  name : string;
+  score : number;
+}
+
