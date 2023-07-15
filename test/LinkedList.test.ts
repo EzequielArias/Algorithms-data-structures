@@ -2,7 +2,6 @@ import request from 'supertest';
 import app from '../src/app';
 import { randomizer } from './mock/randomAuto';
 import { DataType } from '../src/interfaces';
-import { response } from 'express';
 
 describe('LinkedList Routes', () => {
   let arr: DataType[] = [];

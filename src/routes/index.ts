@@ -13,7 +13,6 @@ const a = fs.readdirSync(PATH_NOTES).filter((file: any) => {
   const name = removeExtension(file);
 
   if (name !== 'index') {
-    console.log(name);
     router.use(`/${name}`, require(`./${file}`).default);
   }
 });
